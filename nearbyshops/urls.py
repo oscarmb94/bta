@@ -15,8 +15,23 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path
+from django.conf.urls import include, url
+
+
+
+#urlpatterns = [
+#    path('admin/', admin.site.urls),
+#]
+
+
+
+
 
 
 urlpatterns = [
+    #url(r'^admin/', include(admin.site.urls)),
     path('admin/', admin.site.urls),
+    # views esto es ulitmo
+    path('', include('shops.urls')),
+    # views .... url(r'^hidrologia.data/', hidrologia_view, name='hidrologia'),
 ]

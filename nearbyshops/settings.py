@@ -40,7 +40,19 @@ INSTALLED_APPS = [
     'django.contrib.gis',
     'shops',
     'mapwidgets',
+    'leaflet'
+
 ]
+LEAFLET_CONFIG = {
+  'DEFAULT_CENTER': (40.00,-1.00),
+  'DEFAULT_ZOOM': 7,
+  'MIN_ZOOM': 1,
+  'MAX_ZOOM': 20,
+}
+
+SERIALIZATION_MODULES = {
+     "geojson": "django.contrib.gis.serializers.geojson",
+  }
 MAP_WIDGETS = {
     "GooglePointFieldWidget": (
         ("zoom", 15),

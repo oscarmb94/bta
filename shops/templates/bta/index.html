@@ -1,0 +1,14 @@
+<html>
+{% load leaflet_tags %}
+    <head>
+        {% leaflet_js %}
+        {% leaflet_css %}
+        <head>
+   <style media="screen">
+     #poland { width:75%; height:75% }
+   </style>
+    </head>
+    <body>
+        {% leaflet_map "poland" %}
+    </body>
+</html>
